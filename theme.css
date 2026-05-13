@@ -1,0 +1,23 @@
+:root {
+    /* 2026 Core Palette: Cinematic Surrealism */
+    --primary-accent: #e0bb6b; /* Burnished Gold */
+    --secondary-accent: #4a3aff; /* Deep Indigo */
+    --tertiary-accent: #ff3d00; /* Safety Orange (Autonomous Pipe) */
+    --bg-color: #050508; /* Cinematic Black */
+
+    /* Surfaces & Depth (Fluid / Wave) */
+    --surface-color: #0d0d12; /* Solid Surface */
+    --card-bg: #111116; /* Solid Card */
+    --border-dim: rgba(224, 187, 107, 0.15); /* Gold-tinted border */
+
+    /* Typography */
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e6;
+    --text-dim: #a1a1aa;
+
+    /* Layout & Animation */
+    --nav-height: 70px;
+    --fluid-motion: cubic-bezier(0.65, 0, 0.35, 1);
+    --transition: 0.45s var(--fluid-motion);
+    --wave-gradient: linear-gradient(180deg, var(--bg-color) 0%, #0a0a0f 100%);
+}

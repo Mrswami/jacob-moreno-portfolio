@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Jacob Moreno
+N:Moreno;Jacob;;;
+TITLE:Systems-Oriented Developer | ROS 2 & Full-Stack
+TEL;TYPE=CELL:+12108427143
+EMAIL;TYPE=INTERNET:jacobflutterdev@gmail.com
+URL:https://jacob-moreno-dev-2026.web.app
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/jacob-moreno-b732a318b/
+URL;TYPE=GitHub:https://github.com/Mrswami
+NOTE:Systems-oriented developer building autonomous systems and scalable mobile/web infrastructure.
+END:VCARD

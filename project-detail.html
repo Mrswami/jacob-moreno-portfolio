@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Jacob Moreno</title>
+    <link rel="stylesheet" href="style.css?v=2.3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-accent: #00d2ff;
+            --bg-dark: #0a0a0c;
+        }
+
+        body {
+            overflow-y: auto;
+            background: radial-gradient(circle at 10% 10%, #1a1a2e 0%, #050507 100%);
+            padding: 0;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .outline-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary-accent);
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            opacity: 0.7;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-5px);
+        }
+
+        .project-header-section {
+            margin-bottom: 4rem;
+        }
+
+        .project-title-xl {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 30%, var(--primary-accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .project-tagline {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            max-width: 800px;
+        }
+
+        .media-showcase {
+            width: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #000;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .media-showcase video,
+        .media-showcase img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .media-showcase video {
+            aspect-ratio: 16/9;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 5rem;
+            margin-bottom: 6rem;
+        }
+
+        .section-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--primary-accent);
+            margin-bottom: 1.5rem;
+            display: block;
+            font-weight: 700;
+        }
+
+        .description-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .description-card p {
+            margin-bottom: 2rem;
+        }
+
+        .description-card strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .sidebar-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            position: sticky;
+            top: 2rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .tech-pill {
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 210, 255, 0.08);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            color: var(--primary-accent);
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .action-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .action-btn {
+            padding: 1rem 1.5rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.3s;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .action-btn.primary {
+            background: var(--primary-accent);
+            color: #000;
+        }
+
+        .action-btn.secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+        }
+
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .outline-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outline-container">
+        <a href="index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Base
+        </a>
+
+        <div id="project-container">
+            <div style="text-align: center; padding: 100px; opacity: 0.5;">_SYNCHRONIZING_CORE_DATA...</div>
+        </div>
+    </div>
+
+    <script>
+        function parseMarkdown(text) {
+            if (!text) return '';
+            return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        }
+
+        async function init() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            if (!id) { window.location.href = 'index.html'; return; }
+
+            try {
+                const res = await fetch('projects.json');
+                const data = await res.json();
+                const project = data.projects.find(p => p.id === id);
+
+                if (!project) {
+                    document.getElementById('project-container').innerHTML = '<h1 style="text-align:center; padding: 100px;">404: OBJECT_NOT_FOUND</h1>';
+                    return;
+                }
+
+                render(project);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function render(p) {
+            const container = document.getElementById('project-container');
+
+            let mediaHtml = '';
+            if (p.media.type === 'video') {
+                mediaHtml = `<video src="${p.media.src}" autoplay loop muted playsinline></video>`;
+            } else if (p.media.type === 'gallery') {
+                // Pick the first non-icon image for showcase
+                const firstImg = p.media.items.find(i => i.style !== 'icon') || p.media.items[0];
+                mediaHtml = `<img src="${firstImg.src}" alt="${p.title}">`;
+            } else {
+                mediaHtml = `<img src="${p.media.src}" alt="${p.title}">`;
+            }
+
+            const tagsHtml = p.tags.map(t => `<span class="tech-pill">${t}</span>`).join('');
+            const linksHtml = (p.links || []).map(l => `<a href="${l.url}" target="_blank" class="action-btn primary">${l.label} →</a>`).join('');
+
+            container.innerHTML = `
+                <div class="project-header-section">
+                    <h1 class="project-title-xl">${p.title}</h1>
+                    <p class="project-tagline">${p.subtitle || ''}</p>
+                </div>
+
+                <div class="media-showcase">
+                    ${mediaHtml}
+                </div>
+
+                <div class="content-grid">
+                    <div class="main-content">
+                        <span class="section-label">System Intelligence</span>
+                        <div class="description-card">
+                            <p>${parseMarkdown(p.long_description || p.resume_desc)}</p>
+                            ${Array.isArray(p.details) ? p.details.map(d => `<p>${parseMarkdown(d)}</p>`).join('') : ''}
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar">
+                        <span class="section-label">Core Technologies</span>
+                        <div class="tech-tags">
+                            ${tagsHtml}
+                        </div>
+
+                        ${linksHtml ? `
+                            <span class="section-label">Project Assets</span>
+                            <div class="action-links">
+                                ${linksHtml}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        init();
+    </script>
+</body>
+
+</html>
