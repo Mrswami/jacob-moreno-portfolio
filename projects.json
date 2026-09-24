@@ -156,36 +156,6 @@
             "visible": true
         },
         {
-            "id": "azure-certification",
-            "tier": 1,
-            "title": "Microsoft Azure Certification (AZ-900)",
-            "subtitle": "microsoftAzure.certification",
-            "resume_desc": "Mastered Azure Cloud Fundamentals (AZ-900) through a rigorous study sprint, implementing secure, scalable infrastructure for automated data processing.",
-            "tags": [
-                "Azure Cloud",
-                "Security Architecture",
-                "AZ-900"
-            ],
-            "media": {
-                "type": "image",
-                "src": "project-azure-dashboard.png",
-                "style": "screenshot"
-            },
-            "details": [
-                "Enterprise cloud certification and production implementation path.",
-                "• Established secure dashboard using Azure Static Web Apps and Azure Functions.",
-                "• Configured Microsoft Entra ID (IAM) zero-trust access control."
-            ],
-            "long_description": "Demonstrating production-grade cloud architecture, this dashboard tracks Azure certification milestones and enterprise cloud deployments.",
-            "links": [
-                {
-                    "url": "https://victorious-coast-049c93d1e.7.azurestaticapps.net",
-                    "text": "Live Azure Dashboard →"
-                }
-            ],
-            "visible": true
-        },
-        {
             "id": "austin-petanque",
             "tier": 1,
             "title": "Austin Petanque Platform",
@@ -258,6 +228,36 @@
                 {
                     "url": "https://chesspulse.web.app",
                     "text": "chesspulse.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "azure-certification",
+            "tier": 1,
+            "title": "Microsoft Azure Certification (AZ-900)",
+            "subtitle": "microsoftAzure.certification",
+            "resume_desc": "Mastered Azure Cloud Fundamentals (AZ-900) through a rigorous study sprint, implementing secure, scalable infrastructure for automated data processing.",
+            "tags": [
+                "Azure Cloud",
+                "Security Architecture",
+                "AZ-900"
+            ],
+            "media": {
+                "type": "image",
+                "src": "project-azure-dashboard.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "Enterprise cloud certification and production implementation path.",
+                "• Established secure dashboard using Azure Static Web Apps and Azure Functions.",
+                "• Configured Microsoft Entra ID (IAM) zero-trust access control."
+            ],
+            "long_description": "Demonstrating production-grade cloud architecture, this dashboard tracks Azure certification milestones and enterprise cloud deployments.",
+            "links": [
+                {
+                    "url": "https://victorious-coast-049c93d1e.7.azurestaticapps.net",
+                    "text": "Live Azure Dashboard →"
                 }
             ],
             "visible": true
