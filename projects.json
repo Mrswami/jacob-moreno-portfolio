@@ -166,6 +166,11 @@
                 "Real-time Sync",
                 "Community Ops"
             ],
+            "media": {
+                "type": "image",
+                "src": "austin_petanque_bannerlogo.png",
+                "style": "screenshot"
+            },
             "details": [
                 "High-performance community platform designed for real-time tournament tracking.",
                 "• Optimistic UI state updates for instant score reporting under high concurrency.",
