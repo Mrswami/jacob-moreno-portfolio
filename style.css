@@ -1378,18 +1378,18 @@ h4,
         overflow-x: hidden !important;
         -webkit-overflow-scrolling: touch !important;
         overscroll-behavior: contain !important;
-        padding: 1rem !important;
+        padding: 0.75rem 0.85rem !important;
         box-sizing: border-box !important;
     }
 
-    /* Projects Grid Mobile (Clean full-width vertical cards) */
+    /* Projects Grid Mobile (Compact multi-card view) */
     .project-grid {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
         max-width: 100% !important;
-        gap: 1.1rem !important;
-        padding: 0 0 2rem 0 !important;
+        gap: 0.75rem !important;
+        padding: 0 0 1.25rem 0 !important;
         box-sizing: border-box !important;
     }
 
@@ -1398,33 +1398,37 @@ h4,
         max-width: 100% !important;
         background: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 12px !important;
-        padding: 1rem !important;
+        border-radius: 10px !important;
+        padding: 0.75rem 0.85rem !important;
         box-sizing: border-box !important;
         transform: none !important;
     }
 
     .project-card h3 {
-        font-size: 1.05rem !important;
-        line-height: 1.3 !important;
-        margin: 0 0 0.2rem 0 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.25 !important;
+        margin: 0 0 0.1rem 0 !important;
     }
 
     .project-subtitle {
-        font-size: 0.72rem !important;
-        margin-bottom: 0.5rem !important;
+        font-size: 0.68rem !important;
+        margin-bottom: 0.35rem !important;
         word-break: break-all;
     }
 
     .project-media {
         width: 100% !important;
-        height: 155px !important;
-        max-height: 175px !important;
-        margin-bottom: 0.65rem !important;
+        height: 105px !important;
+        max-height: 115px !important;
+        margin-bottom: 0.45rem !important;
         border-radius: 8px !important;
         overflow: hidden !important;
         position: relative !important;
         background: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .project-media.icon-mode {
+        height: 60px !important;
     }
 
     .project-media img,
@@ -1436,43 +1440,43 @@ h4,
     }
 
     .project-details p {
-        font-size: 0.85rem !important;
-        line-height: 1.5 !important;
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
         color: var(--text-secondary) !important;
-        margin-bottom: 0.35rem !important;
+        margin-bottom: 0.2rem !important;
         display: block !important;
         -webkit-line-clamp: unset !important;
         overflow: visible !important;
     }
 
     .tags {
-        margin-top: 0.4rem !important;
+        margin-top: 0.3rem !important;
     }
 
     .tags span {
-        font-size: 0.68rem !important;
-        padding: 0.2rem 0.5rem !important;
-        margin-right: 0.3rem !important;
-        margin-bottom: 0.3rem !important;
+        font-size: 0.65rem !important;
+        padding: 0.15rem 0.45rem !important;
+        margin-right: 0.25rem !important;
+        margin-bottom: 0.25rem !important;
     }
 
     .project-links {
-        margin-top: 0.75rem !important;
+        margin-top: 0.45rem !important;
         display: flex !important;
         flex-wrap: wrap !important;
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
     }
 
     .tech-specs-link {
         display: inline-flex !important;
         align-items: center !important;
-        gap: 0.35rem !important;
-        padding: 0.5rem 0.9rem !important;
+        gap: 0.3rem !important;
+        padding: 0.35rem 0.75rem !important;
         background: rgba(0, 240, 255, 0.08) !important;
         border: 1px solid rgba(0, 240, 255, 0.3) !important;
-        border-radius: 8px !important;
+        border-radius: 6px !important;
         color: var(--primary-accent) !important;
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         font-weight: 600 !important;
         text-decoration: none !important;
     }
