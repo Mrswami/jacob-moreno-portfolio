@@ -168,7 +168,8 @@
             ],
             "media": {
                 "type": "image",
-                "src": "austin_petanque_bannerlogo.png",
+                "src": "austin_petanque_banner.png",
+                "mobile_src": "austin_petanque_banner_mobile.png",
                 "style": "screenshot"
             },
             "details": [

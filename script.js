@@ -170,6 +170,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const imgStyle = isIcon
                 ? 'width: 76px; height: 76px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));'
                 : 'width: 100%; height: 100%; object-fit: cover; border-radius: 8px;';
+            const mobileSrc = project.media.mobile_src;
+
+            if (mobileSrc) {
+                return `
+                    <div class="project-media ${isIcon ? 'icon-mode' : ''}">
+                        <picture style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <source media="(max-width: 767px)" srcset="${mobileSrc}">
+                            <img src="${src}" alt="${project.title}" style="${imgStyle}">
+                        </picture>
+                    </div>
+                `;
+            }
+
             return `
                 <div class="project-media ${isIcon ? 'icon-mode' : ''}">
                     <img src="${src}" alt="${project.title}" style="${imgStyle}">
