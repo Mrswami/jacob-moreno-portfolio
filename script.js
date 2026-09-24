@@ -502,11 +502,117 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- "Jacob OS Shell" Terminal & OpenRouter Proxy Client ---
+    function initTerminal() {
+        const form = document.getElementById('terminal-form');
+        const input = document.getElementById('terminal-input');
+        const output = document.getElementById('terminal-output');
+        const chips = document.querySelectorAll('.term-chip');
+
+        if (!form || !input || !output) return;
+
+        function appendLine(text, type = 'info') {
+            const line = document.createElement('div');
+            line.className = `term-line ${type}-line`;
+            line.innerHTML = text;
+            output.appendChild(line);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        async function processCommand(cmd) {
+            const cleanCmd = cmd.trim();
+            if (!cleanCmd) return;
+
+            appendLine(`jacob@system:~$ ${cleanCmd}`, 'user');
+            input.value = '';
+
+            const lower = cleanCmd.toLowerCase();
+
+            // Local Instant Terminal Commands
+            if (lower === 'help') {
+                appendLine(`AVAILABLE_COMMANDS:<br>
+  • cat skills.log   : Display Jacob's core technical stack & specializations<br>
+  • list projects    : Output active projects from projects.json<br>
+  • clear            : Clear terminal screen<br>
+  • ask [question]   : Send freeform query to OpenRouter AI Intelligence Engine`);
+                return;
+            }
+
+            if (lower === 'clear') {
+                output.innerHTML = '<div class="term-line banner-line">[SYSTEM_INIT]: Jacob OS Shell Cleared.</div>';
+                return;
+            }
+
+            if (lower === 'cat skills.log') {
+                appendLine(`[SKILLS_LOG]:<br>
+  • Mobile & Web  : Flutter/Dart, React.js, Node.js, Python (Flask/FastAPI), Firebase<br>
+  • Robotics      : ROS 2 (Jazzy), C++17, Gazebo 3D, SLAM Toolbox, Nav2, Micro-ROS<br>
+  • Cloud & Ops   : Microsoft Azure (AZ-900), Azure Static Web Apps, Security Architecture`);
+                return;
+            }
+
+            if (lower === 'list projects') {
+                appendLine(`[ACTIVE_PROJECTS]:<br>
+  1. YMCA 360 (ymca360.web.app) - Greater Austin YMCA Member Platform<br>
+  2. Spotify Reshuffle (spotifyReshuffle.web.app) - Algorithmic audio reshuffler<br>
+  3. Autonomous ROS 2 Follow Bot - C++ LiDAR SLAM & Gazebo simulation<br>
+  4. atxLetsPlay (atxletsplay.web.app) - Real-time event tracking engine<br>
+  5. Austin Petanque Platform (austinpetanque.web.app) - Sports management engine<br>
+  6. Microsoft Azure Certification (AZ-900) - Cloud security & IAM dashboard`);
+                return;
+            }
+
+            // AI Intelligence Query (Via API Proxy or Client Fallback)
+            appendLine('<span class="pulse"></span> [AI_QUERY]: Synthesizing response via OpenRouter (google/gemini-2.5-flash)...', 'info');
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: cleanCmd })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data.response) {
+                        appendLine(`[AI_RESPONSE]: ${data.response}`, 'ai');
+                        return;
+                    }
+                }
+            } catch (err) {
+                // Fallback to static prompt answer if proxy endpoint is offline
+            }
+
+            // Client-side fallback response if backend proxy is offline
+            setTimeout(() => {
+                let fallbackAnswer = "Jacob Moreno is a Software Developer specializing in cloud applications, automation, and systems integration (Python, Go, React, ROS 2, Azure).";
+                if (lower.includes('hire') || lower.includes('why')) {
+                    fallbackAnswer = "Jacob brings a unique blend of high-concurrency software development (React, Node, Firebase), low-level systems engineering (ROS 2, C++17), and Microsoft Azure cloud certification.";
+                }
+                appendLine(`[AI_RESPONSE]: ${fallbackAnswer}`, 'ai');
+            }, 600);
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            processCommand(input.value);
+        });
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                const cmd = chip.getAttribute('data-cmd');
+                if (cmd) processCommand(cmd);
+            });
+        });
+    }
+
     // Initialize all dynamic components
     loadSovereignConfig();
     initStarfield();
     initLogoColorEffects();
     initTextScramble();
     initCardTilt();
+    initTerminal();
     loadContent();
 });
+

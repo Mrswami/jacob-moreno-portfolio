@@ -1555,3 +1555,161 @@ h4,
     text-transform: uppercase;
     user-select: none;
 }
+
+/* ── "Jacob OS Shell" Terminal Styling ── */
+.terminal-modal-content {
+    background: #08080c !important;
+    border: 1px solid rgba(0, 240, 255, 0.35) !important;
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.15) !important;
+}
+
+.terminal-header {
+    background: rgba(0, 240, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2) !important;
+}
+
+.terminal-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.term-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.term-dot.red { background: #ff5f56; }
+.term-dot.yellow { background: #ffbd2e; }
+.term-dot.green { background: #27c93f; }
+
+.term-title {
+    font-family: 'Courier New', monospace !important;
+    font-size: 0.9rem !important;
+    color: var(--primary-accent) !important;
+    letter-spacing: 1px;
+}
+
+.terminal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.terminal-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.term-chip {
+    background: rgba(0, 240, 255, 0.06);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.term-chip:hover {
+    background: rgba(0, 240, 255, 0.2);
+    border-color: rgba(0, 240, 255, 0.6);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.terminal-output {
+    background: #050508;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 0.85rem;
+    height: 230px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: #d0d0d0;
+    box-sizing: border-box;
+}
+
+.term-line {
+    margin-bottom: 0.4rem;
+    word-break: break-word;
+}
+
+.term-line.banner-line {
+    color: #00f0ff;
+    font-weight: bold;
+}
+
+.term-line.info-line {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.76rem;
+}
+
+.term-line.user-line {
+    color: #e0bb6b;
+    font-weight: 600;
+}
+
+.term-line.ai-line {
+    color: #a0f0ff;
+}
+
+.term-line.error-line {
+    color: #ff6b6b;
+}
+
+.terminal-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+}
+
+.term-prompt-symbol {
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: #00f0ff;
+    white-space: nowrap;
+}
+
+#terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+}
+
+.term-send-btn {
+    background: rgba(0, 240, 255, 0.15);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    color: #00f0ff;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.term-send-btn:hover {
+    background: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}

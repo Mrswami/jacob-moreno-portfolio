@@ -190,6 +190,7 @@
             <div class="nav-item" data-target="modal-projects" data-text="Projects">Projects</div>
             <div class="nav-item" data-target="modal-skills" data-text="Skills">Skills</div>
             <div class="nav-item" data-target="modal-contact" data-text="Contact">Contact</div>
+            <div class="nav-item AI-shell-item" data-target="modal-terminal" data-text="AI Shell">AI Shell</div>
         </div>
     </div>
 
@@ -440,19 +441,63 @@
                     </svg>
                     <span>Back: Skills</span>
                 </button>
-                <button class="next-section-btn"
-                    onclick="document.querySelector('#modal-contact .close-modal').click()">
-                    <span>Close</span>
+                <button class="next-section-btn" data-next="modal-terminal">
+                    <span>Next: AI Shell</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                        <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <script src="script.js?v=3.1"></script>
+    <!-- AI Shell Modal (Jacob OS Shell) -->
+    <div class="modal-overlay" id="modal-terminal" aria-hidden="true">
+        <div class="modal-content terminal-modal-content">
+            <div class="modal-header terminal-header">
+                <div class="terminal-title-bar">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                    <h2 class="modal-title term-title">jacob@system:~$ JACOB_OS_SHELL v2.6</h2>
+                </div>
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body terminal-body">
+                <!-- Preset Command Chips -->
+                <div class="terminal-chips">
+                    <button class="term-chip" data-cmd="cat skills.log">&gt; cat skills.log</button>
+                    <button class="term-chip" data-cmd="list projects">&gt; list projects</button>
+                    <button class="term-chip" data-cmd="Why should I hire Jacob?">&gt; ask "Why hire Jacob?"</button>
+                    <button class="term-chip" data-cmd="help">&gt; help</button>
+                </div>
+                <!-- Output Window -->
+                <div class="terminal-output" id="terminal-output">
+                    <div class="term-line banner-line">[SYSTEM_INIT]: Jacob Moreno OpenRouter Intelligence Bridge Online.</div>
+                    <div class="term-line info-line">Type a command or click a quick action chip below to query experience, projects, or architecture.</div>
+                </div>
+                <!-- Input Line -->
+                <form id="terminal-form" class="terminal-input-row">
+                    <span class="term-prompt-symbol">jacob@system:~$</span>
+                    <input type="text" id="terminal-input" placeholder="Type command or ask a question..." autocomplete="off">
+                    <button type="submit" class="term-send-btn">RUN</button>
+                </form>
+            </div>
+            <div class="next-section-hint">
+                <button class="prev-section-btn" data-prev="modal-contact">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Back: Contact</span>
+                </button>
+                <button class="next-section-btn" onclick="document.querySelector('#modal-terminal .close-modal').click()">
+                    <span>Close Shell</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=3.2"></script>
 </body>
 
 </html>
