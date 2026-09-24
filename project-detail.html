@@ -92,11 +92,14 @@
         .media-showcase img {
             width: 100%;
             display: block;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: top center;
+            max-height: 80vh;
+            background: #000;
         }
 
         .media-showcase video {
-            aspect-ratio: 16/9;
+            max-height: 80vh;
         }
 
         .content-grid {
@@ -253,18 +256,26 @@
             const container = document.getElementById('project-container');
 
             let mediaHtml = '';
-            if (p.media.type === 'video') {
-                mediaHtml = `<video src="${p.media.src}" autoplay loop muted playsinline></video>`;
-            } else if (p.media.type === 'gallery') {
-                // Pick the first non-icon image for showcase
+            if (p.media && p.media.type === 'video') {
+                mediaHtml = `
+                    <div style="position: relative; background: #000; border-radius: 20px; overflow: hidden;">
+                        <video id="showcase-video" src="${p.media.src}" autoplay loop muted controls playsinline style="width: 100%; max-height: 80vh; object-fit: contain; object-position: top center; border-radius: 20px; background: #000;"></video>
+                        <button onclick="toggleVideoFullscreen()" class="action-btn primary" style="position: absolute; bottom: 15px; right: 15px; z-index: 10; opacity: 0.9; cursor: pointer; padding: 0.6rem 1rem; font-size: 0.85rem;">
+                            📺 Expand Full Screen
+                        </button>
+                    </div>
+                `;
+            } else if (p.media && p.media.type === 'gallery') {
                 const firstImg = p.media.items.find(i => i.style !== 'icon') || p.media.items[0];
                 mediaHtml = `<img src="${firstImg.src}" alt="${p.title}">`;
-            } else {
+            } else if (p.media && p.media.src) {
                 mediaHtml = `<img src="${p.media.src}" alt="${p.title}">`;
             }
 
             const tagsHtml = p.tags.map(t => `<span class="tech-pill">${t}</span>`).join('');
-            const linksHtml = (p.links || []).map(l => `<a href="${l.url}" target="_blank" class="action-btn primary">${l.label} →</a>`).join('');
+            const linksHtml = (p.links || []).map(l => `<a href="${l.url}" target="_blank" class="action-btn primary">${l.text || l.label} →</a>`).join('');
+
+            const isArduinoProject = p.id === 'autonomous-driving-car' || (p.tags && p.tags.some(t => t.toLowerCase().includes('arduino')));
 
             container.innerHTML = `
                 <div class="project-header-section">
@@ -283,6 +294,16 @@
                             <p>${parseMarkdown(p.long_description || p.resume_desc)}</p>
                             ${Array.isArray(p.details) ? p.details.map(d => `<p>${parseMarkdown(d)}</p>`).join('') : ''}
                         </div>
+
+                        ${isArduinoProject ? `
+                            <span class="section-label" style="margin-top: 2rem;">Arduino Hardware & Microcontroller Architecture</span>
+                            <div class="description-card" style="border-color: rgba(0, 210, 255, 0.3); background: rgba(0, 210, 255, 0.03);">
+                                <p><strong>⚡ Microcontroller Hardware Integration:</strong> High-frequency Arduino Mega / ATmega328P C++ firmware receiving real-time motor velocity commands via serial transport.</p>
+                                <p><strong>⚙️ Closed-Loop PID Control:</strong> Dual quadrature magnetic wheel encoders calculating instantaneous RPM and applying PID corrections for linear/angular tracking accuracy.</p>
+                                <p><strong>📡 ROS 2 Serial Interface:</strong> Micro-ROS / rosserial node parsing geometry_msgs/Twist ROS topics into 8-bit PWM motor driver signals (L298N / BTS7960).</p>
+                                <p><strong>🔋 Power Management & Safety:</strong> Isolated 12V LiFePO4 motor power rail with optocoupler isolation to prevent microcontroller ground loops.</p>
+                            </div>
+                        ` : ''}
                     </div>
                     
                     <div class="sidebar">
@@ -300,6 +321,19 @@
                     </div>
                 </div>
             `;
+        }
+
+        function toggleVideoFullscreen() {
+            const vid = document.getElementById('showcase-video');
+            if (vid) {
+                if (vid.requestFullscreen) {
+                    vid.requestFullscreen();
+                } else if (vid.webkitRequestFullscreen) {
+                    vid.webkitRequestFullscreen();
+                } else if (vid.msRequestFullscreen) {
+                    vid.msRequestFullscreen();
+                }
+            }
         }
 
         init();

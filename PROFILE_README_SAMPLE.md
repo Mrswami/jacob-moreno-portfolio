@@ -33,7 +33,7 @@ Passionate about building autonomous systems, scalable infrastructure, and educa
 
 ## 📫 Let's Connect
 - **Portfolio**: [jacob-moreno-dev-2026.web.app](https://jacob-moreno-dev-2026.web.app)
-- **LinkedIn**: [Jacob Moreno](https://www.linkedin.com/in/jacob-moreno-b732a318b/)
+- **LinkedIn**: [Jacob Moreno](https://www.linkedin.com/in/jacob-moreno-3533b73b6/)
 - **Email**: [jacobflutterdev@gmail.com](mailto:jacobflutterdev@gmail.com)
 
 ---

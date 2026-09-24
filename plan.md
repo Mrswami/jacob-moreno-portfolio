@@ -29,7 +29,7 @@ These sites aggregate data and can be a liability. You should manually opt-out o
 
 ## 🛠️ Phase 3: Social Media Lockdown
 If it's not professional, it should be private.
-- [ ] **LinkedIn**: (The priority) Update your email to `jacobflutterdev@gmail.com`. Ensure your headline matches your portfolio: *Systems Architect & ROS 2 Specialist*.
+- [ ] **LinkedIn**: (The priority) Update your email to `jacobflutterdev@gmail.com`. Ensure your headline matches your portfolio: *STEM Educator & Full Stack Web Developer*.
 - [ ] **Instagram/Facebook**: Set to Private. Review "Tagged Photos" and hide or untag anything unprofessional.
 - [ ] **X (Twitter)**: If you use it for tech, keep it public. If not, private it.
 - [ ] **Reddit**: If your username is linked to your real name, review your comment history for controversial takes.

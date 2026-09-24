@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "jacobdev",
     "public": ".",
     "releaseLimit": 5,
     "ignore": [

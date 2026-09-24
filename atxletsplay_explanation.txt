@@ -1,0 +1,9 @@
+======================================================================
+ATXLETSPLAY - TECHNICAL EXPLANATION & ARCHITECTURE
+======================================================================
+
+System Architecture:
+- Client Interface: High-performance dynamic web/mobile front-end with optimistic state updates.
+- Real-Time Data Synchronization: Event-driven sync engine built to minimize client-side latency and handle dynamic data bursts during live gatherings.
+- State Management: Resilient state tracking ensuring distributed client nodes remain tightly bound to event broadcast signals.
+- Integration: Modular API structure ready for cloud microservices (Azure Functions / Firebase backend relay).

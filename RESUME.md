@@ -1,6 +1,6 @@
 # JACOB MORENO
 Austin, TX 78705 | jacobflutterdev@gmail.com | (210) 842-7143
-[LinkedIn](https://www.linkedin.com/in/jacob-moreno-b732a318b/) | [GitHub](https://github.com/Mrswami) | [Portfolio](https://jacob-moreno-dev-2026.web.app)
+[LinkedIn](https://www.linkedin.com/in/jacob-moreno-3533b73b6/) | [GitHub](https://github.com/Mrswami) | [Portfolio](https://jacob-moreno-dev-2026.web.app)
 
 ## PROFESSIONAL SUMMARY
 Developer with experience in Flutter mobile apps, ROS 2 robotics, and Full-Stack systems. Experienced in building real-time applications with Firebase and Supabase, and developing robotic simulations. Focused on creating practical, efficient software solutions.

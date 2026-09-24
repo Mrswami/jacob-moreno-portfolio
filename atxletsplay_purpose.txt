@@ -1,0 +1,10 @@
+======================================================================
+ATXLETSPLAY - PROJECT PURPOSE
+======================================================================
+
+atxLetsPlay is an interactive community infrastructure platform engineered specifically for Austin-based live events, gaming meetups, and local civic/interactive gatherings.
+
+Primary Goals:
+1. Provide a central real-time hub for local event discovery and live event participation.
+2. Enable instantaneous group sync for multi-participant activities in Austin.
+3. Foster local developer & gamer community connections with accessible, low-latency interfaces.
