@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
             profilePhotoTrigger.style.transform = 'scale(1.1)';
             profilePhotoTrigger.style.boxShadow = '0 0 50px rgba(0, 240, 255, 0.8)';
             setTimeout(() => {
-                window.location.href = 'https://victorious-coast-049c93d1e.7.azurestaticapps.net';
+                window.location.href = 'cv-builder.html';
             }, 400);
         });
     }
