@@ -7,34 +7,168 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
             background-color: var(--bg-primary, #050505);
             color: #fff;
             font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            min-height: 100vh;
         }
         .builder-container {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 12px;
-            max-width: 600px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
         h1 {
             color: var(--primary-accent, #00f0ff);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-accent);
+            font-weight: 600;
+        }
+        textarea, select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+        textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+        }
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+        select option {
+            background: var(--bg-primary, #050505);
+            color: white;
+        }
+        .checkbox-group {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 6px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            cursor: pointer;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-accent);
+        }
+        .btn.primary {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            background: var(--primary-accent);
+            color: #000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn.primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+        .btn.primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        #output-area {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--primary-accent);
+            border-left: 4px solid var(--primary-accent);
+            border-radius: 8px;
+            display: none;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        .loading {
+            text-align: center;
+            display: none;
+            margin-top: 1.5rem;
+            color: var(--primary-accent);
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
         }
     </style>
 </head>
 <body>
     <div class="builder-container">
         <h1>CV AI Builder</h1>
-        <p>Admin Access Granted.</p>
-        <p>The backend Firebase Cloud Function and the UI for generating custom cover letters using your OpenAPI key is currently under construction.</p>
+        <p style="text-align: center; margin-bottom: 2rem; color: #aaa;">Admin Access Granted. Generate custom cover letters tailored to specific jobs.</p>
+        
+        <div class="form-group">
+            <label for="job-desc">Job Description (Paste here):</label>
+            <textarea id="job-desc" placeholder="Paste the full job description here..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="tone-select">Cover Letter Tone:</label>
+            <select id="tone-select">
+                <option value="Professional (Standard)">Professional (Standard)</option>
+                <option value="Conversational & Enthusiastic">Conversational & Enthusiastic</option>
+                <option value="Highly Technical & Analytical">Highly Technical & Analytical</option>
+            </select>
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="use-resume" checked> Utilize RESUME.md Context
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="use-projects" checked> Utilize Website Projects Context
+            </label>
+        </div>
+
+        <button id="generate-btn" class="btn primary">Generate Cover Letter</button>
+        <div class="loading" id="loading-indicator">Synthesizing Cover Letter... Please wait.</div>
+
+        <div id="output-area"></div>
         <br>
-        <a href="index.html" class="btn primary" style="color: white; text-decoration: none; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px;">Return to Site</a>
+        <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="index.html" style="color: #aaa; text-decoration: none; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; transition: 0.3s;">&larr; Return to Portfolio Site</a>
+        </div>
     </div>
+
+    <script src="cv-builder.js"></script>
 </body>
 </html>

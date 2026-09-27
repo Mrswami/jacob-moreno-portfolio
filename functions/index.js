@@ -95,4 +95,85 @@ Key Information:
     apiReq.end();
 });
 
+app.post("/generate-cv", (req, res) => {
+    const clientIp = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "client";
+
+    if (!checkRateLimit(clientIp)) {
+        return res.status(429).json({ error: "RATE_LIMIT_EXCEEDED: Maximum 5 queries per minute allowed." });
+    }
+
+    const { jobDescription, tone, resumeText, projectsText } = req.body;
+    
+    if (!jobDescription) {
+        return res.status(400).json({ error: "MISSING_JOB_DESCRIPTION" });
+    }
+
+    const apiKey = process.env.OPENROUTER_API_KEY;
+    if (!apiKey) {
+        return res.status(500).json({ error: "API_KEY_NOT_CONFIGURED: Set OPENROUTER_API_KEY in environment." });
+    }
+
+    const systemPrompt = `You are an expert technical cover letter writer. Your task is to write a highly tailored cover letter for Jacob Moreno for the following job description.
+
+Tone: ${tone || 'Professional'}
+
+Rules:
+1. Write in the first person ("I").
+2. Do NOT use placeholder brackets like [Company Name] if the company isn't in the job description, just speak generally about the role.
+3. Keep it to a standard cover letter length (3-4 concise paragraphs).
+4. Do NOT hallucinate skills. Only use the skills and experiences provided in the Resume and Projects context below.
+5. Highlight relevant overlaps between the job description and the provided context.
+
+Context - Resume:
+${resumeText ? resumeText.substring(0, 5000) : 'No resume provided.'}
+
+Context - Projects:
+${projectsText ? projectsText.substring(0, 5000) : 'No projects provided.'}`;
+
+    const payload = JSON.stringify({
+        model: "google/gemini-2.5-flash",
+        messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: `Job Description:\n${jobDescription}` }
+        ],
+        max_tokens: 800
+    });
+
+    const options = {
+        hostname: "openrouter.ai",
+        path: "/api/v1/chat/completions",
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://jacobdev.web.app",
+            "X-Title": "Jacob Moreno Dev Suite",
+            "Content-Length": Buffer.byteLength(payload)
+        }
+    };
+
+    const apiReq = https.request(options, (apiRes) => {
+        let body = "";
+        apiRes.on("data", (chunk) => { body += chunk; });
+        apiRes.on("end", () => {
+            try {
+                const parsed = JSON.parse(body);
+                if (parsed.choices && parsed.choices[0] && parsed.choices[0].message) {
+                    return res.json({ response: parsed.choices[0].message.content });
+                }
+                return res.status(500).json({ error: "INVALID_OPENROUTER_RESPONSE", raw: body });
+            } catch (err) {
+                return res.status(500).json({ error: "PARSE_ERROR" });
+            }
+        });
+    });
+
+    apiReq.on("error", (err) => {
+        res.status(500).json({ error: "UPSTREAM_CONNECTION_ERROR" });
+    });
+
+    apiReq.write(payload);
+    apiReq.end();
+});
+
 exports.api = functions.https.onRequest(app);
