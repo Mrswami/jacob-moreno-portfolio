@@ -672,8 +672,9 @@
                 const target = document.getElementById('impact-target');
 
                 if (data.projects) {
-                    // Show top 4 items for PDF space efficiency
-                    target.innerHTML = data.projects.slice(0, 4).map(p => `
+                    // Show top 4 visible items for PDF space efficiency
+                    const visibleProjects = data.projects.filter(p => p.visible !== false);
+                    target.innerHTML = visibleProjects.slice(0, 4).map(p => `
                         <div class="entry" style="margin-bottom: 1.2rem;">
                             <div class="entry-header">
                                 <span class="entry-title" style="font-size: 1.1rem;">${p.title}</span>

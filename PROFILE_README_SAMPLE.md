@@ -13,6 +13,9 @@ Passionate about building autonomous systems, scalable infrastructure, and educa
 
 ## 🚀 High-Impact Projects
 
+### 🎛️ [Cables Audio Visualizer Engine](https://cables.web.app)
+*Real-time Web Audio API visualizer & DAW sync bridge with 6 procedural synthesis engines and modular EQ modulation routing.*
+
 ### 🤖 [Autonomous ROS 2 Follow Bot](https://jacob-moreno-dev-2026.web.app)
 *Robotic simulation using Python nodes & ultrasonic sensor feedback (20ms latency).*
 

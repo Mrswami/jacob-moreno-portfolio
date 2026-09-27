@@ -21,6 +21,10 @@ Developer with experience in Flutter mobile apps, ROS 2 robotics, and Full-Stack
 
 ## TECHNICAL PROJECTS
 
+**CABLES AUDIO VISUALIZER & DAW SYNC ENGINE**
+* Engineered a real-time audio visualizer with **Web Audio API** and **React**, driving 6 procedural graphic synthesis engines with zero-latency 60–120 FPS animation loops.
+* Implemented modular **EQ modulation matrix** routing multi-band frequencies to dynamic visual shaders, with DAW sync integration for Ableton Live and Audacity.
+
 **AUTONOMOUS ROS 2 FOLLOW BOT**
 * Developed a robotic simulation in **ROS 2 (Jazzy)** using **Ultrasonic sensors** for obstacle detection and avoidance.
 * Designed Python control nodes for real-time navigation, with **LiDAR integration** currently in development.

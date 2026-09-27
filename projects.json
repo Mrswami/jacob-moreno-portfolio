@@ -92,6 +92,41 @@
             "visible": true
         },
         {
+            "id": "cables",
+            "tier": 1,
+            "title": "Cables Audio Visualizer",
+            "subtitle": "cables.web.app",
+            "resume_desc": "Engineered a real-time audio visualizer and DAW sync bridge with Web Audio API, featuring 6 procedural synthesis engines and modular frequency-to-FX routing.",
+            "tags": [
+                "React / Vite",
+                "Web Audio API",
+                "Real-Time DSP",
+                "DAW & Live Sync"
+            ],
+            "media": {
+                "type": "image",
+                "src": "cables-banner-v2.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "Real-time audio visualizer engineered for stage performances, DAW sync, and browser tab stream capture.",
+                "• 6 procedural visual synthesis engines: Sacred Fractals, Hyperspace Tunnel, Particle Swarms, and Glitch Matrix.",
+                "• Modular modulation matrix routing multi-band frequency levels (Sub, Low, Mid, High) directly to live shader parameters."
+            ],
+            "long_description": "Cables is a high-performance audio visualization engine built for live stage performances and creative coding. Capturing tab audio, system soundcards, or DAW feeds, it transforms frequency spectrums into responsive visuals across 6 GPU-accelerated graphic engines with custom modulation routing.",
+            "links": [
+                {
+                    "url": "https://cables.web.app",
+                    "text": "cables.web.app →"
+                },
+                {
+                    "url": "https://github.com/Mrswami/cables",
+                    "text": "GitHub Repository →"
+                }
+            ],
+            "visible": true
+        },
+        {
             "id": "autonomous-driving-car",
             "tier": 1,
             "title": "Autonomous ROS 2 Follow Bot",

@@ -276,6 +276,7 @@
             const linksHtml = (p.links || []).map(l => `<a href="${l.url}" target="_blank" class="action-btn primary">${l.text || l.label} →</a>`).join('');
 
             const isArduinoProject = p.id === 'autonomous-driving-car' || (p.tags && p.tags.some(t => t.toLowerCase().includes('arduino')));
+            const isCablesProject = p.id === 'cables';
 
             container.innerHTML = `
                 <div class="project-header-section">
@@ -302,6 +303,16 @@
                                 <p><strong>⚙️ Closed-Loop PID Control:</strong> Dual quadrature magnetic wheel encoders calculating instantaneous RPM and applying PID corrections for linear/angular tracking accuracy.</p>
                                 <p><strong>📡 ROS 2 Serial Interface:</strong> Micro-ROS / rosserial node parsing geometry_msgs/Twist ROS topics into 8-bit PWM motor driver signals (L298N / BTS7960).</p>
                                 <p><strong>🔋 Power Management & Safety:</strong> Isolated 12V LiFePO4 motor power rail with optocoupler isolation to prevent microcontroller ground loops.</p>
+                            </div>
+                        ` : ''}
+
+                        ${isCablesProject ? `
+                            <span class="section-label" style="margin-top: 2rem;">Real-Time Audio DSP & Graphic Synthesis Engine</span>
+                            <div class="description-card" style="border-color: rgba(0, 240, 255, 0.3); background: rgba(0, 240, 255, 0.03);">
+                                <p><strong>🎛️ Modular Modulation Matrix:</strong> Maps live sub-bass, kick, mids, and treble frequency bands through individual threshold gates directly into dynamic 3D warp, shockwave, and rotational vectors.</p>
+                                <p><strong>🎨 Procedural Shader Synthesizers:</strong> Real-time 60–120 FPS canvas pipeline running Sacred Fractals, Hyperspace Tunnel, Particle Gravity Swarms, and Glitch Matrix meshes.</p>
+                                <p><strong>📡 Live DAW & System Audio Routing:</strong> High-performance Web Audio API ingestion supporting browser tab capture, microphone / stereo mix loopback, and OSC/WASAPI hooks for Ableton Live and Audacity.</p>
+                                <p><strong>⚡ Zero-Sleep Performance:</strong> Integrated Screen Wake Lock API and background audio clock to ensure uninterrupted visual generation during live performance sessions.</p>
                             </div>
                         ` : ''}
                     </div>

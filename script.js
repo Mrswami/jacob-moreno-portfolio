@@ -555,10 +555,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 appendLine(`[ACTIVE_PROJECTS]:<br>
   1. YMCA 360 (ymca360.web.app) - Greater Austin YMCA Member Platform<br>
   2. Spotify Reshuffle (spotifyReshuffle.web.app) - Algorithmic audio reshuffler<br>
-  3. Autonomous ROS 2 Follow Bot - C++ LiDAR SLAM & Gazebo simulation<br>
-  4. atxLetsPlay (atxletsplay.web.app) - Real-time event tracking engine<br>
-  5. Austin Petanque Platform (austinpetanque.web.app) - Sports management engine<br>
-  6. Microsoft Azure Certification (AZ-900) - Cloud security & IAM dashboard`);
+  3. Cables Audio Visualizer (cables.web.app) - Real-time visualizer & DAW sync engine<br>
+  4. Autonomous ROS 2 Follow Bot - C++ LiDAR SLAM & Gazebo simulation<br>
+  5. atxLetsPlay (atxletsplay.web.app) - Real-time event tracking engine<br>
+  6. Austin Petanque Platform (austinpetanque.web.app) - Sports management engine<br>
+  7. Microsoft Azure Certification (AZ-900) - Cloud security & IAM dashboard`);
                 return;
             }
 
