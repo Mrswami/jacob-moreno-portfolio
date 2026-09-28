@@ -1,0 +1,399 @@
+{
+    "projects": [
+        {
+            "id": "ymca360",
+            "tier": 1,
+            "title": "YMCA 360",
+            "subtitle": "ymca360.web.app",
+            "resume_desc": "Official digital platform and member ecosystem featuring real-time Pickleball court booking, DUPR integration, and digital access passes.",
+            "tags": [
+                "React / PWA",
+                "Real-Time Data",
+                "Community Ops"
+            ],
+            "media": {
+                "type": "image",
+                "src": "ymca360_site_screenshots.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "Full-featured member ecosystem built for Greater Austin YMCA community operations.",
+                "• DUPR-verified Pickleball tournament tracker and live court reservation engine.",
+                "• Digital member barcode integration for sub-second front-desk scan verification."
+            ],
+            "long_description": "YMCA 360 is an interactive digital platform engineered for Greater Austin YMCA community operations. Featuring live court booking, DUPR ratings integration, and mobile member access passes.",
+            "links": [
+                {
+                    "url": "https://ymca360.web.app",
+                    "text": "ymca360.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "truthlink",
+            "tier": 1,
+            "title": "truthLink",
+            "subtitle": "truthLink.web.app",
+            "resume_desc": "Parental Visa debit card management hub featuring customizable spending limits, real-time swipe simulation, and automated family allowances.",
+            "tags": [
+                "React",
+                "FinTech / Visa",
+                "Security Architecture",
+                "Tailwind CSS"
+            ],
+            "media": {
+                "type": "image",
+                "src": "truthlink-logo.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "Granular parental controls for teen debit cards with instant merchant category blocking and velocity protections.",
+                "• Real-time swipe simulator validating custom spending boundaries and parent authorization workflows.",
+                "• Multi-role guardian management, automated chore allowances, and live security audit feed."
+            ],
+            "long_description": "truthLink is a specialized family financial safety and debit management hub giving parents granular control over teen debit cards, merchant category restrictions, and real-time transaction monitoring.",
+            "links": [
+                {
+                    "url": "https://truthlink-4a47d.web.app",
+                    "text": "truthLink.web.app →"
+                }
+            ],
+            "visible": false
+        },
+        {
+            "id": "spotify-reshuffle",
+            "tier": 1,
+            "title": "Spotify Reshuffle",
+            "subtitle": "spotifyReshuffle.web.app",
+            "resume_desc": "Automated Spotify playlist reshuffler and audio feature analysis engine built with Spotify Web API and OAuth 2.0.",
+            "tags": [
+                "Spotify API",
+                "OAuth 2.0",
+                "Audio Analysis"
+            ],
+            "media": {
+                "type": "image",
+                "src": "spotify-reshuffle-logo.jpg",
+                "style": "icon"
+            },
+            "details": [
+                "Algorithmic audio reshuffler bypassing standard shuffle bias using Spotify Web API audio feature vectors.",
+                "• Real-time energy, danceability, and tempo sorting for custom playlist generation.",
+                "• Secure OAuth 2.0 authentication flow with local session persistence."
+            ],
+            "long_description": "Spotify Reshuffle solves the algorithmic repetition of standard music player shuffle logic. Using audio feature metrics, it creates truly dynamic, non-repetitive playlists suited for continuous listening.",
+            "links": [
+                {
+                    "url": "https://spotifyReshuffle.web.app",
+                    "text": "spotifyReshuffle.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "cables",
+            "tier": 1,
+            "title": "Cables Audio Visualizer",
+            "subtitle": "cables.web.app",
+            "resume_desc": "Engineered a real-time audio visualizer and DAW sync bridge with Web Audio API, featuring 6 procedural synthesis engines and modular frequency-to-FX routing.",
+            "tags": [
+                "React / Vite",
+                "Web Audio API",
+                "Real-Time DSP",
+                "DAW & Live Sync"
+            ],
+            "media": {
+                "type": "image",
+                "src": "cables-banner-v2.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "Real-time audio visualizer engineered for stage performances, DAW sync, and browser tab stream capture.",
+                "• 6 procedural visual synthesis engines: Sacred Fractals, Hyperspace Tunnel, Particle Swarms, and Glitch Matrix.",
+                "• Modular modulation matrix routing multi-band frequency levels (Sub, Low, Mid, High) directly to live shader parameters."
+            ],
+            "long_description": "Cables is a high-performance audio visualization engine built for live stage performances and creative coding. Capturing tab audio, system soundcards, or DAW feeds, it transforms frequency spectrums into responsive visuals across 6 GPU-accelerated graphic engines with custom modulation routing.",
+            "links": [
+                {
+                    "url": "https://cables.web.app",
+                    "text": "cables.web.app →"
+                },
+                {
+                    "url": "https://github.com/Mrswami/cables",
+                    "text": "GitHub Repository →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "autonomous-driving-car",
+            "tier": 1,
+            "title": "Autonomous ROS 2 Follow Bot",
+            "subtitle": "autonomousDrivingCar",
+            "resume_desc": "Engineered an autonomous ROS 2 robot with real-time LiDAR sensor fusion, Arduino microcontroller PID motor control, Gazebo simulation, and C++ SLAM navigation.",
+            "tags": [
+                "ROS 2 (Jazzy)",
+                "Arduino Tech",
+                "LiDAR Fusion",
+                "C++17 / Gazebo"
+            ],
+            "media": {
+                "type": "video",
+                "src": "project-follow-bot.mp4"
+            },
+            "details": [
+                "Arduino Microcontroller Integration: Low-level C++ motor actuation firmware utilizing PID closed-loop feedback and PWM motor drivers.",
+                "• ROS 2 Micro-ROS Serial Bridge: Sub-millisecond hardware control relaying high-level Nav2 velocity vectors.",
+                "• LiDAR Sensor Fusion & SLAM: Real-time spatial point cloud mapping and obstacle avoidance."
+            ],
+            "long_description": "An autonomous robotics platform integrating ROS 2 Jazzy, low-level Arduino hardware controllers, Gazebo 3D simulation, and real-time C++ SLAM navigation for physical autonomous vehicle execution.",
+            "links": [
+                {
+                    "url": "project-detail.html?id=autonomous-driving-car",
+                    "text": "Full Tech Specs →"
+                },
+                {
+                    "url": "https://github.com/Mrswami",
+                    "text": "GitHub Repository →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "atxletsplay",
+            "tier": 1,
+            "title": "atxLetsPlay",
+            "subtitle": "atxletsplay.web.app",
+            "resume_desc": "Architected a high-concurrency community platform for Austin-based interactive events, utilizing a real-time data sync engine.",
+            "tags": [
+                "Real-time Data",
+                "Systems Architecture",
+                "Node.js"
+            ],
+            "media": {
+                "type": "image",
+                "src": "austin_community_banner.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "High-performance community hub designed for real-time interaction and engagement.",
+                "• Optimized for massive concurrent data streams with minimal overhead.",
+                "• Implemented sophisticated state management for dynamic event tracking."
+            ],
+            "long_description": "Proudly built as a cornerstone for local interactive engagement, atxLetsPlay leverages advanced synchronization methods to ensure a seamless experience across distributed client nodes.",
+            "links": [
+                {
+                    "url": "https://atxletsplay.web.app",
+                    "text": "atxletsplay.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "austin-petanque",
+            "tier": 1,
+            "title": "Austin Petanque Platform",
+            "subtitle": "austinpetanque.web.app",
+            "resume_desc": "Community hub and tournament bracket system designed for high-concurrency event tracking and member sync.",
+            "tags": [
+                "Firebase",
+                "Real-time Sync",
+                "Community Ops"
+            ],
+            "media": {
+                "type": "image",
+                "src": "austin_petanque_banner.png",
+                "mobile_src": "austin_petanque_banner_mobile.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "High-performance community platform designed for real-time tournament tracking.",
+                "• Optimistic UI state updates for instant score reporting under high concurrency.",
+                "• Automated bracket progression and membership analytics."
+            ],
+            "long_description": "Built as a dedicated platform for community sports operations in Austin, this app handles live match scoring, player profiles, and event registration with zero lag.",
+            "links": [
+                {
+                    "url": "https://austinpetanque.web.app",
+                    "text": "austinpetanque.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "instagram-transcript",
+            "tier": 1,
+            "title": "Instagram Transcript Tool",
+            "subtitle": "instagramtranscript.web.app",
+            "resume_desc": "Automated video audio extraction and AI transcription tool for Instagram video content.",
+            "tags": [
+                "AI Transcription",
+                "Media Processing",
+                "Web Platform"
+            ],
+            "details": [
+                "Automated audio-to-text transcription engine tailored for Instagram media content.",
+                "• Fast transcription parsing and structured caption rendering."
+            ],
+            "long_description": "Instagram Transcript provides rapid transcript extraction and subtitle generation for Instagram videos.",
+            "links": [
+                {
+                    "url": "https://instagramtranscript.web.app",
+                    "text": "instagramtranscript.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "chesspulse",
+            "tier": 2,
+            "title": "ChessPulse Pro",
+            "subtitle": "chesspulse.web.app",
+            "resume_desc": "High-velocity chess tournament aggregator pulling real-time player data and live games from Lichess and Chess.com APIs.",
+            "tags": [
+                "API Integration",
+                "Chess Intelligence",
+                "React"
+            ],
+            "media": {
+                "type": "image",
+                "src": "project-chess-logo.png",
+                "style": "icon"
+            },
+            "details": [
+                "Real-time chess analytics engine aggregating live tournament feeds.",
+                "• Asynchronous API polling pipeline with low memory footprint."
+            ],
+            "links": [
+                {
+                    "url": "https://chesspulse.web.app",
+                    "text": "chesspulse.web.app →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "azure-certification",
+            "tier": 1,
+            "title": "Microsoft Azure Certification (AZ-900)",
+            "subtitle": "microsoftAzure.certification",
+            "resume_desc": "Mastered Azure Cloud Fundamentals (AZ-900) through a rigorous study sprint, implementing secure, scalable infrastructure for automated data processing.",
+            "tags": [
+                "Azure Cloud",
+                "Security Architecture",
+                "AZ-900"
+            ],
+            "media": {
+                "type": "image",
+                "src": "project-azure-dashboard.png",
+                "style": "screenshot"
+            },
+            "details": [
+                "Enterprise cloud certification and production implementation path.",
+                "• Established secure dashboard using Azure Static Web Apps and Azure Functions.",
+                "• Configured Microsoft Entra ID (IAM) zero-trust access control."
+            ],
+            "long_description": "Demonstrating production-grade cloud architecture, this dashboard tracks Azure certification milestones and enterprise cloud deployments.",
+            "links": [
+                {
+                    "url": "https://victorious-coast-049c93d1e.7.azurestaticapps.net",
+                    "text": "Live Azure Dashboard →"
+                }
+            ],
+            "visible": true
+        },
+        {
+            "id": "ironclad-pipeline",
+            "tier": 1,
+            "title": "Ironclad Verification Pipeline",
+            "subtitle": "Sovereign Cloud Security & Cryptographic Identity",
+            "resume_desc": "Engineered a dual-anchor digital notary system utilizing Azure Key Vault HSMs and the Bitcoin blockchain to create immutable cryptographic proofs.",
+            "tags": [
+                "Azure Cloud Security",
+                "Identity Orchestration",
+                "Cryptography"
+            ],
+            "details": [
+                "Zero-Trust Architecture: Files are hashed locally; only the SHA-256 fingerprint is transmitted.",
+                "• Identity Federation: Bound to an Azure FIPS 140-2 Level 3 HSM."
+            ],
+            "links": [
+                {
+                    "url": "https://ironclad-verify-portal.web.app",
+                    "text": "Live Verification Portal →"
+                }
+            ],
+            "visible": false
+        },
+        {
+            "id": "reality-capture-pipeline",
+            "tier": 1,
+            "title": "Automated Reality Capture Pipeline",
+            "subtitle": "Serverless 3D Asset Forge",
+            "resume_desc": "Architected a serverless 3D reconstruction pipeline using Luma AI and Azure Functions to automate physical-to-digital assets.",
+            "tags": [
+                "3D Photogrammetry",
+                "Serverless Architecture",
+                "Generative AI"
+            ],
+            "media": {
+                "type": "image",
+                "src": "openart-image_Um7xiiA2_1771988051398_raw.jpg",
+                "style": "screenshot"
+            },
+            "details": [
+                "A fully automated 'Digital Twin' pipeline for community-scale asset generation.",
+                "• Event-driven architecture eliminates manual processing friction."
+            ],
+            "visible": false
+        }
+    ],
+    "experience": [
+        {
+            "id": "ymca-receptionist",
+            "title": "Front Desk Receptionist",
+            "company": "TownLake YMCA Gym",
+            "date": "2025 – Present",
+            "location": "Austin, TX",
+            "challenge": "Managing high-volume facility check-ins, member verification, and phone inquiries with administrative precision in a fast-paced community fitness environment.",
+            "solution": "Operated YMCA front-desk management systems, resolved membership and scheduling inquiries, and facilitated guest onboarding and class check-ins.",
+            "impact": "Reduced member wait times during peak hours, improved check-in efficiency, and consistently delivered welcoming, responsive member support."
+        },
+        {
+            "id": "member-coordinator",
+            "title": "Member Coordinator",
+            "company": "Co-op Residential Community",
+            "date": "2023 – 2025",
+            "location": "Austin, TX",
+            "challenge": "Centralizing residential administration, onboarding new residents, and managing multi-member governance logistics for a 20+ resident cooperative.",
+            "solution": "Facilitated weekly governance meetings, coordinated resident move-ins, and developed communication channels to streamline member requests and conflict resolution.",
+            "impact": "Maintained 100% community occupancy, increased member participation in cooperative governance, and ensured transparent residential administration."
+        },
+        {
+            "id": "kitchen-manager",
+            "title": "Kitchen Manager",
+            "company": "Co-op Residential Community",
+            "date": "2023 – 2025",
+            "location": "Austin, TX",
+            "challenge": "Managing commercial-scale grocery procurement, nutritional meal planning, and health sanitation compliance on a strict monthly budget for 20+ daily diners.",
+            "solution": "Established inventory control spreadsheets, scheduled communal cooking and cleaning rotations, and negotiated bulk purchasing with local food distributors.",
+            "impact": "Reduced food waste by over 25%, kept monthly dining expenditures under budget, and maintained flawless food safety and sanitation inspection standards."
+        },
+        {
+            "id": "si-chemistry",
+            "title": "Supplemental Instructor (Chemistry)",
+            "company": "Austin Community College",
+            "date": "Oct 2025 – Present",
+            "location": "Austin, TX",
+            "challenge": "Bridging the gap between complex theoretical modeling and student retention.",
+            "solution": "Developed structured content reviews and digital learning modules to simplify abstract chemical concepts.",
+            "impact": "Significantly improved student performance metrics and fostered a collaborative, goal-oriented environment."
+        }
+    ],
+    "contact": {
+        "email": "jacobflutterdev@gmail.com",
+        "phone": "(210) 842-7143",
+        "location": "Austin, TX 78705"
+    }
+}
